@@ -49,10 +49,11 @@ nav {
     color: #eceada;
 }
 
-menu{position: fixed;}
+
 h1{color:#be3535;
    text-align: center;
 }
+
 section{
     scroll-margin-top: 5vw;
     width: 100%; 
@@ -90,18 +91,9 @@ footer {
 section a{
         font-size: 0.5cm;
         }
+
   A:visited {color:#d95151}
   A:link {color:#be3535}
-  
-  .navigation {
-	display: flex;
-	flex-flow:row;
-	justify-content: space-evenly;
-	border-radius: 3cm;
-	list-style:none;
-	padding: 5px;
-	background: #be3535;
-}
 
 .infos form{
     display: grid;
@@ -111,7 +103,6 @@ section a{
 .infos input{
     border-radius: 10px;
     border-color: #be3535;
-
 }
 
 .submit-button {
