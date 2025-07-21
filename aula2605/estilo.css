@@ -1,0 +1,263 @@
+body {
+    font-family: "Belleza", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #eceada;
+  }
+  
+header {
+    position: sticky;
+    display: flex;
+    height: 50px;   
+    background-color: #ffffff;
+    border-radius: 20cm;
+    justify-content: space-evenly;    
+}
+.imagem-header1 {
+    width: auto;
+    height: 50px;
+}
+
+
+#collapsibleNavbar{
+  color: #eceada;
+  background-color: #be3535;
+  width: 100vw;
+}
+.navbar .nav-link {
+  color: #eceada !important;
+}
+
+.navbar .nav-link:hover {
+  color: #db9797 !important;
+}
+
+.navbar-brand {
+  color: #eceada !important;
+}
+
+
+nav {
+    scroll-margin-top: 5vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eceada;
+}
+
+menu{position: fixed;}
+h1{color:#be3535;
+   text-align: center;
+}
+section{
+    scroll-margin-top: 5vw;
+    width: 100%; 
+    min-height: 100vh;
+    display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2vw;
+  }
+.img-1{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-2 {
+    width: 50%;
+    height: auto;
+    margin-left: 10cm;
+}
+
+footer {
+  font-size: smaller;
+  background-color: #cfcaac; 
+  border-radius: 10px; 
+  width: 100%;
+  height: auto; 
+  margin: 0 auto;
+  padding: 10px;
+  justify-content:center; 
+  display: flex;
+  flex-wrap: wrap;
+}
+        
+section a{
+        font-size: 0.5cm;
+        }
+  A:visited {color:#d95151}
+  A:link {color:#be3535}
+  
+  .navigation {
+	display: flex;
+	flex-flow:row;
+	justify-content: space-evenly;
+	border-radius: 3cm;
+	list-style:none;
+	padding: 5px;
+	background: #be3535;
+}
+
+.infos form{
+    display: grid;
+    grid-template-columns: 350px;
+}
+
+.infos input{
+    border-radius: 10px;
+    border-color: #be3535;
+
+}
+
+.submit-button {
+  background-color: #be3535;
+  color: white;
+  padding: 5px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.form-img{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+.form-img img{
+  width: 100%;
+  height: auto;
+}
+@media (width<550px){
+  .form-img{
+    grid-template-columns: 1fr;
+  }
+}
+.fotos{
+  display: grid;
+  grid-template-columns: 30vw 30vw 30vw;
+  grid-template-rows: 30vw 30vw;
+  grid-template-areas: 
+  'item1 item2 item3'
+  'item4 item4 item5';
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  justify-items: center;
+}
+.fotos img{
+  width: 100%;
+  height: 100%;
+}
+
+.item1{
+  grid-area: item1;
+  object-fit: contain;
+}
+
+.item2{
+  grid-area: item2;
+  object-fit: contain;
+}
+
+.item3{
+  grid-area: item3;
+  object-fit: contain;
+}
+
+.item4{
+  grid-area: item4;
+  object-fit: contain;
+}
+
+.item5{
+  grid-area: item5;
+  object-fit: contain;
+}
+@media (width<550px){
+  .fotos{
+    grid-template-columns: 90vw;
+  grid-template-rows: repeat(5, 30vw);
+  grid-template-areas: 
+  'item1' 
+  'item2'
+  'item3' 
+  'item5'
+  'item4'
+  'item4'
+  ;
+  }
+  .item4{
+    width:100vw;
+    height:auto;
+}
+}
+
+@keyframes aparece {
+  0% { opacity:0 }
+  100% { opacity:1 }
+}
+
+.titulo_aparece {
+  animation: aparece 2s linear forwards;
+} 
+
+.drop {
+  width: 30px;
+  height: 30px;
+  background-color: #be3535;
+  border-radius: 50% 50% 50% 0;
+  position:sticky;
+  transform: rotate(180deg); 
+  animation: drop-animation 2s linear infinite;
+}
+
+@keyframes drop-animation {
+  0% {
+    transform: rotate(180deg) translateY(40px);
+  } 
+  100% {
+    transform: rotate(180deg) translateY(0); 
+  }
+}
+.gota {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px; 
+  padding-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+  .gota {
+    flex-direction: column;
+  }
+}
+
+#deslize-container {
+  display: flex;
+  gap: 10px;
+  min-width: 120px;       
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.deslize {
+  width: 30px;
+  height: 30px;
+  background-color: #be3535;
+  border-radius: 50% 50% 50% 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.deslize:hover {
+  transform: translateX(20px) rotate(180deg);
+}
+
+@media (min-width: 500px) {
+  .deslize {
+    margin-top: -450px;
+  }
+}
