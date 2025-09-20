@@ -154,3 +154,17 @@ img {
 h1 {
   color: rgb(117, 145, 145);
 }
+
+footer {
+  font-size: smaller;
+  background-color: rgb(117, 145, 145); 
+  border-radius: 10px; 
+  width: 100%;
+  height: auto; 
+  margin: 0 auto;
+  padding: 10px;
+  justify-content:center; 
+  display: flex;
+  flex-wrap: wrap;
+  color:rgb(240, 236, 232);
+}
