@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rotina Escolar - Lista de Tarefas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container py-4">
+    <h1 class="text-center mb-4">Rotina Escolar - Lista de Tarefas</h1>
+
+    <form id="formTarefa" class="row g-3" novalidate>
+      <div class="col-md-6">
+        <label for="titulo" class="form-label">Título</label>
+        <input type="text" id="titulo" class="form-control" required>
+      </div>
+
+      <div class="col-md-3">
+        <label for="inicio" class="form-label">Início</label>
+        <input type="date" id="inicio" class="form-control" required>
+      </div>
+
+      <div class="col-md-3">
+        <label for="fim" class="form-label">Fim</label>
+        <input type="date" id="fim" class="form-control" required>
+        <div id="dateError" role="alert" aria-live="assertive" class="text-danger d-none mt-1"></div>
+      </div>
+
+      <div class="col-md-4">
+        <label for="responsavel" class="form-label">Responsável</label>
+        <input type="text" id="responsavel" class="form-control" required>
+      </div>
+
+      <div class="col-md-4">
+        <label for="prioridade" class="form-label">Prioridade</label>
+        <select id="prioridade" class="form-select" required>
+          <option value="" disabled selected>-- selecione --</option>
+          <option value="Alta">Alta</option>
+          <option value="Média">Média</option>
+          <option value="Baixa">Baixa</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label for="disciplina" class="form-label">Disciplina</label>
+        <select id="disciplina" class="form-select" required>
+          <option value="" disabled selected>-- selecione --</option>
+          <option value="Matemática">Matemática</option>
+          <option value="Português">Português</option>
+          <option value="História">História</option>
+          <option value="Geografia">Geografia</option>
+          <option value="Física">Física</option>
+          <option value="Química">Química</option>
+          <option value="Inglês">Inglês</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="tipoAvaliacao" class="form-label">Tipo de avaliação</label>
+        <select id="tipoAvaliacao" class="form-select" required>
+          <option value="" disabled selected>-- selecione --</option>
+          <option value="Prova">Prova</option>
+          <option value="Trabalho">Trabalho</option>
+          <option value="Leitura">Leitura</option>
+          <option value="Exercício">Exercício</option>
+          <option value="Projeto">Projeto</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="observacao" class="form-label">Observação</label>
+        <textarea id="observacao" class="form-control" rows="2" required></textarea>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Adicionar Tarefa</button>
+      </div>
+    </form>
+
+    <div class="mt-4 d-flex gap-2">
+      <button class="btn btn-success" id="btnSalvar">Gravar dados</button>
+      <button class="btn btn-info" id="btnRecuperar">Recuperar dados</button>
+      <button class="btn btn-danger" id="btnLimpar">Limpar dados</button>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <h3>Tarefas Pendentes</h3>
+        <ul id="listaPendentes" class="list-group" role="list"></ul>
+      </div>
+      <div class="col-md-6">
+        <h3>Tarefas Concluídas</h3>
+        <ul id="listaFeitas" class="list-group" role="list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
