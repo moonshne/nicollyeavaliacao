@@ -1,9 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   color: #000;
-  background-color: #f8f9fa;
+  background-color: #f2e5d9;
 }
 
 button {
@@ -16,11 +18,12 @@ button {
 }
 
 button:hover {
-  filter: brightness(0.95);
+  filter: brightness(0.85);
+  transform: scale(1.05);
 }
 
 input, select, textarea {
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 0.5rem;
   width: 100%;
   box-sizing: border-box;
@@ -32,10 +35,6 @@ form {
   padding: 1rem;
 }
 
-.list-group {
-  list-style: none;
-  padding: 0;
-}
 
 .list-group-item {
   background: #fff;
@@ -46,7 +45,7 @@ form {
   color: #000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   form, .list-group-item {
     padding: 0.75rem;
   } 
